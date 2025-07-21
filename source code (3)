@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    float a, b;
+    char op;
+
+    printf("Enter first number: ");
+    scanf("%f", &a);
+
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &op);  // space before %c is important
+
+    printf("Enter second number: ");
+    scanf("%f", &b);
+
+    if (op == '+') {
+        printf("Result = %.2f\n", a + b);
+    } else if (op == '-') {
+        printf("Result = %.2f\n", a - b);
+    } else if (op == '*') {
+        printf("Result = %.2f\n", a * b);
+    } else if (op == '/') {
+        if (b != 0)
+            printf("Result = %.2f\n", a / b);
+        else
+            printf("Cannot divide by zero.\n");
+    } else {
+        printf("Invalid operator.\n");
+    }
+
+    return 0;
+}
